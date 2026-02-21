@@ -1,16 +1,13 @@
-import React from "react";
+// src/components/Search.jsx
+import React from 'react';
 
-function Search({setSearch}) {
+export default function Search({ value, onChange }) {
   return (
-    <div className="ui large fluid icon input">
-      <input
-        type="text"
-        placeholder="Search your Recent Transactions"
-        onChange={(e) => setSearch(e.target.value)}
-      />
-      <i className="circular search link icon"></i>
-    </div>
+    <input
+      placeholder="Search your Recent Transactions"
+      type="text"
+      value={value}
+      onChange={onChange}
+    />
   );
 }
-
-export default Search;
